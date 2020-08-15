@@ -1,0 +1,803 @@
+desc: --heap=yes --stacks=yes --massif-out-file=massif.out
+cmd: ./speller dictionaries/large texts/holmes.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=29176760
+mem_heap_B=320072
+mem_heap_extra_B=90168
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 320072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 315504 0x109C62: load (dictionary.c:118)
+  n0: 315504 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=62115840
+mem_heap_B=703952
+mem_heap_extra_B=199848
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 703952 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 699384 0x109C62: load (dictionary.c:118)
+  n0: 699384 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=102596184
+mem_heap_B=1180512
+mem_heap_extra_B=336008
+mem_stacks_B=1056
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=133964588
+mem_heap_B=1500776
+mem_heap_extra_B=427512
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 1500776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1496208 0x109C62: load (dictionary.c:118)
+  n0: 1496208 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=158461372
+mem_heap_B=1777640
+mem_heap_extra_B=506616
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 1777640 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1773072 0x109C62: load (dictionary.c:118)
+  n0: 1773072 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=185203087
+mem_heap_B=2042184
+mem_heap_extra_B=582200
+mem_stacks_B=1056
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=230256184
+mem_heap_B=2543888
+mem_heap_extra_B=725544
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 2543888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2539320 0x109C62: load (dictionary.c:118)
+  n0: 2539320 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=267421688
+mem_heap_B=2983096
+mem_heap_extra_B=851032
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 2983096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2978528 0x109C62: load (dictionary.c:118)
+  n0: 2978528 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=303415415
+mem_heap_B=3392960
+mem_heap_extra_B=968136
+mem_stacks_B=1056
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=333295006
+mem_heap_B=3676656
+mem_heap_extra_B=1049192
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 3676656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3672088 0x109C62: load (dictionary.c:118)
+  n0: 3672088 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=357263083
+mem_heap_B=3981408
+mem_heap_extra_B=1136264
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 3981408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3976840 0x109C62: load (dictionary.c:118)
+  n0: 3976840 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=394412217
+mem_heap_B=4395360
+mem_heap_extra_B=1254536
+mem_stacks_B=888
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=432644595
+mem_heap_B=4810264
+mem_heap_extra_B=1373080
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 4810264 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4805696 0x109C62: load (dictionary.c:118)
+  n0: 4805696 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=464696377
+mem_heap_B=5157296
+mem_heap_extra_B=1472232
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 5157296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5152728 0x109C62: load (dictionary.c:118)
+  n0: 5152728 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=484594035
+mem_heap_B=5366736
+mem_heap_extra_B=1532072
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 5366736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5362168 0x109C62: load (dictionary.c:118)
+  n0: 5362168 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=521359439
+mem_heap_B=5753976
+mem_heap_extra_B=1642712
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 5753976 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5749408 0x109C62: load (dictionary.c:118)
+  n0: 5749408 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=549562947
+mem_heap_B=6047584
+mem_heap_extra_B=1726600
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 6047584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6043016 0x109C62: load (dictionary.c:118)
+  n0: 6043016 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=575305004
+mem_heap_B=6343208
+mem_heap_extra_B=1811064
+mem_stacks_B=1056
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=615144454
+mem_heap_B=6814672
+mem_heap_extra_B=1945768
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 6814672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6810104 0x109C62: load (dictionary.c:118)
+  n0: 6810104 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=660156663
+mem_heap_B=7306352
+mem_heap_extra_B=2086248
+mem_stacks_B=1032
+heap_tree=detailed
+n2: 7306352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7301784 0x109C62: load (dictionary.c:118)
+  n0: 7301784 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=696963050
+mem_heap_B=7679088
+mem_heap_extra_B=2192744
+mem_stacks_B=1064
+heap_tree=detailed
+n2: 7679088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7674520 0x109C62: load (dictionary.c:118)
+  n0: 7674520 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=722728239
+mem_heap_B=7990952
+mem_heap_extra_B=2281848
+mem_stacks_B=1032
+heap_tree=peak
+n2: 7990952 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7986384 0x109C62: load (dictionary.c:118)
+  n0: 7986384 0x10932D: main (speller.c:40)
+ n0: 4568 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=752949192
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=775614824
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=813390954
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=836056644
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=866277591
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=888943270
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=919164143
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=960725971
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=983407746
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1006089522
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1051452923
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1074134657
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1108157218
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1130838951
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1153520646
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1187543293
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1221565829
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1266929251
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1300951822
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=824
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1323633519
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1346315270
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1380337925
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=824
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1403019608
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=detailed
+n2: 8018744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8013152 0x109C62: load (dictionary.c:118)
+  n0: 8013152 0x10932D: main (speller.c:40)
+ n0: 5592 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1425701357
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1459723951
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1482405676
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1516428309
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=detailed
+n2: 8018744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8013152 0x109C62: load (dictionary.c:118)
+  n0: 8013152 0x10932D: main (speller.c:40)
+ n0: 5592 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=1536325996
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1556223723
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1576121385
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=840
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1596019073
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1615916738
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1635814401
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=840
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1655712087
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1675609763
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1695507428
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1715405095
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=detailed
+n2: 8018744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8013152 0x109C62: load (dictionary.c:118)
+  n0: 8013152 0x10932D: main (speller.c:40)
+ n0: 5592 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=1735302788
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1755200474
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1775098166
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1794995835
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1814893496
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1834791257
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1854688918
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1874586582
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1894484268
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1914381928
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=detailed
+n2: 8018744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8013152 0x109C62: load (dictionary.c:118)
+  n0: 8013152 0x10932D: main (speller.c:40)
+ n0: 5592 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=1934279593
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1954177263
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1974074944
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1993972603
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=2013870273
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=2033767947
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=2053665622
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=2073563286
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=2093460978
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=2113358666
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=detailed
+n2: 8018744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8013152 0x109C62: load (dictionary.c:118)
+  n0: 8013152 0x10932D: main (speller.c:40)
+ n0: 5592 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=2133256359
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=2153154024
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=824
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=2173051756
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=2192949417
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=2212847083
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1016
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=2232744757
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=2252642430
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=872
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=2272540131
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=1040
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=2292437820
+mem_heap_B=8018744
+mem_heap_extra_B=2289504
+mem_stacks_B=864
+heap_tree=empty
