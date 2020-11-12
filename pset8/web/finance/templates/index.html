@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <div class="container-fluid">
+
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+            <h1 class="display-4">Cash</h1>
+            <h6 class="text-muted">Your current available cash</h6>
+            <p class="card-text"><strong>{{ usd(cash) }}</strong></p>
+            <a href="#" class="card-link">Add Cash</a>
+        </div>
+
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+            <h1 class="display-4">Stocks Owned</h1>
+            <p class="lead">Your current invested balance is <strong>{{ usd(total) }}</strong></p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stock_table" aria-expanded="false" aria-controls="stock_table">
+                View Stocks
+            </button>
+        </div>
+
+        <div id="stock_table" class="collapse shadow-sm">
+            <div class="table-responsive">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Current Price</th>
+                        <th scope="col">Total</th>
+                    </thead>
+
+                    <tbody>
+                        {% for stock in stocks %}
+                            <tr>
+                                <th scope="row">{{ stock[0] }}</th>
+                                <td>{{ stock[1] }}</td>
+                                <td>{{ stock[2] }}</td>
+                                <td>{{ usd(stock[3]) }}</td>
+                                <td>{{ usd(stock[4]) }}</td>
+                            </tr>
+                        {% endfor %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Total:</strong> {{ usd(total) }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block css_styles %}
+    <link href="{{ url_for('static', filename='quote.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    {% if quoted %}
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <pre>
+            <p class="h4">Name: {{ name }}</p>
+            <p class="h4">Symbol: {{ symbol }}</p>
+            <p class="h4">Price (USD): {{ usd(price) }}</p>
+        </pre>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <form class="form-quote" action="/quote" method="post">
+            <label class="sr-only" for="input_stock_name">Search</label>
+            <input
+                    class="form-control"
+                    autofocus
+                    autocomplete="on"
+                    name="stock_name"
+                    id="input_stock_name"
+                    required
+                    placeholder="Search"
+                    aria-label="Search"
+                    type="text"
+            />
+            <button class="btn btn-primary btn-block" type="submit">Search</button>
+        </form>
+
+
+    </div>
+{% endblock %}

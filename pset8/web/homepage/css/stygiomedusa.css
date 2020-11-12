@@ -1,0 +1,10 @@
+#stygiomedusa_title_main {
+    font-size: 80px;
+    text-align: center;
+}
+
+#stygiomedusa_galler_container {
+    display: flex;
+    width: 80%;
+    padding: 40px;
+}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+
+{% block css_styles %}
+    <link href="{{ url_for('static', filename='register.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="text-center container">
+        <form class="form-register" action="/register" method="post">
+            <h1 class="mb-3">Register</h1>
+            <!-- username -->
+            <label for="input_username" class="sr-only">Username</label>
+            <input class="form-control" type="text" id="input_username" autofocus required autocomplete="off" name="username" placeholder="Username"/>
+
+            <!-- email -->
+            <label for="input_email" class="sr-only">Email</label>
+            <input class="form-control" type="email" id="input_email" autocomplete="off" autofocus required name="email" placeholder="Email"/>
+
+            <!-- password -->
+            <label class="sr-only" for="input_password">Password</label>
+            <input class="form-control" autofocus required autocomplete="off" name="password" placeholder="Password" id="input_password" type="password"/>
+
+            <!-- confirm password -->
+            <label class="sr-only" for="input_password_confirm">Confirm Password</label>
+            <input class="form-control" autocomplete="off" required autofocus id="input_password_confirm" name="confirm_password" placeholder="Confirm Password" type="password"/>
+
+            <!-- button -->
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}

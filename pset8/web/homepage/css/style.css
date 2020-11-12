@@ -1,0 +1,26 @@
+body {
+    padding: 30px;
+    background-color: #e6ffff;
+}
+
+.title {
+    font-family: 'Suez One', serif;
+    font-size: 40px;
+    color: yellowgreen;
+}
+
+.text_container {
+    padding: 5px;
+}
+
+.text {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    padding: 5px;
+    text-align: justify;
+}
+
+#index_title_main {
+    font-size:  80px;
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block css_styles %}
+    <link href="{{ url_for('static', filename='sell.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+
+        {% if sold %}
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <p class="h3 text-success">Transaction Successful</p>
+                    <p>Name: {{ name }}</p>
+                    <p>Symbol: {{ symbol }}</p>
+                    <p>Quantity Sold: {{ quantity }}</p>
+                    <p>Price: {{ usd(price) }}</p>
+                    <p>Transaction Amount: {{ usd(transaction_amount) }}</p>
+                    <p>Total Shares Owned: {{ total_shares }}</p>
+                    <p>Cash Remaining: {{ usd(cash) }}</p>
+            </div>
+        {% endif %}
+
+        <div class="shadow-sm rounded p-3 mb-5 bg-white">
+            <form class="form-sell" method="post" action="/sell">
+                <!-- label for screen readers -->
+                <label for="input_sell_search" class="sr-only">
+                    Symbol
+                </label>
+
+                <!-- input field -->
+                <input
+                        class="form-control"
+                        required autocomplete="on"
+                        autofocus autocapitalize="on"
+                        name="symbol_name"
+                        id="input_sell_search"
+                        placeholder="Symbol"
+                />
+
+                <label class="sr-only" for="sell_quantity">Quantity</label>
+                <input
+                        class="form-control"
+                        name="quantity"
+                        required autocapitalize="on"
+                        autocomplete="off"
+                        id="sell_quantity"
+                        placeholder="Quantity"
+                />
+
+                <button type="submit" class="btn btn-block btn-primary">Sell</button>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

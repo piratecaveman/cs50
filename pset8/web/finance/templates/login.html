@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block css_styles %}
+    <link href="{{ url_for('static', filename='login.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="text-center container">
+        <form class="form-login" action="/login" method="post">
+            <h1 class="mb-3">Login</h1>
+
+            <!-- username -->
+            <label class="sr-only" for="input_username">Username</label>
+            <input class="form-control" autofocus autocomplete="off" required type="text" name="username" placeholder="Username" id="input_username"/>
+
+            <!-- password -->
+            <label class="sr-only" for="input_password">Password</label>
+            <input class="form-control" autocomplete="off" autofocus required type="password" name="password" placeholder="Password" id="input_password"/>
+
+            <!-- button -->
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Log In</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block css_styles %}
+    <link href="{{ url_for('static', filename='buy.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+
+        {% if bought %}
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <p class="h3 text-success">Transaction Successful</p>
+                    <p>Name: {{ name }}</p>
+                    <p>Symbol: {{ symbol }}</p>
+                    <p>Quantity Bought: {{ quantity }}</p>
+                    <p>Price: {{ usd(price) }}</p>
+                    <p>Transaction Amount: {{ usd(transaction_amount) }}</p>
+                    <p>Total Shares Owned: {{ total_shares }}</p>
+                    <p>Cash Remaining: {{ usd(cash) }}</p>
+            </div>
+        {% endif %}
+
+        <div class="shadow-sm rounded p-3 mb-5 bg-white">
+            <form class="form-buy" method="post" action="/buy">
+                <!-- label for screen readers -->
+                <label for="input_buy_search" class="sr-only">
+                    Symbol
+                </label>
+
+                <!-- input field -->
+                <input
+                        class="form-control"
+                        required autocomplete="on"
+                        autofocus autocapitalize="on"
+                        name="symbol_name"
+                        id="input_buy_search"
+                        placeholder="Symbol"
+                />
+
+                <label class="sr-only" for="buy_quantity">Quantity</label>
+                <input
+                        class="form-control"
+                        name="quantity"
+                        required autocapitalize="on"
+                        autocomplete="off"
+                        id="buy_quantity"
+                        placeholder="Quantity"
+                />
+
+                <button type="submit" class="btn btn-block btn-primary">Buy</button>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

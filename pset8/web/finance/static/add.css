@@ -1,0 +1,11 @@
+.form-add {
+    max-width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-control {
+    padding: 10px;
+    margin-bottom: 10px;
+}

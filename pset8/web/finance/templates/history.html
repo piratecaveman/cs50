@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+
+    <div class="container-fluid">
+
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+            <h1 class="display-4">Transaction History</h1>
+            <p class="lead">There are {{ transactions }} in your history</strong></p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#stock_table" aria-expanded="false" aria-controls="stock_table">
+                View Transactions
+            </button>
+        </div>
+
+        <div id="stock_table" class="collapse shadow-sm">
+            <div class="table-responsive">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Cost of Share</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Transaction Total</th>
+                        <th scope="col">Timestamp</th>
+                    </thead>
+
+                    <tbody>
+                        {% for transaction in history %}
+                            <tr>
+                                <th scope="row">{{ transaction[0] }}</th>
+                                <td>{{ transaction[1] }}</td>
+                                <td>{{ transaction[2] }}</td>
+                                <td>{{ transaction[3] }}</td>
+                                <td>{{ usd(transaction[4]) }}</td>
+                                {% if transaction[5] == "BUY" %}
+                                    <td class="text-success">{{ transaction[5] }}</td>
+                                {% else %}
+                                    <td class="text-danger">{{ transaction[5] }}</td>
+                                {% endif %}
+                                <td>{{ usd(transaction[6]) }}</td>
+                                <td>{{ transaction[7] }}</td>
+                            </tr>
+                        {% endfor %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Total:</strong> {{ usd(total) }}</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
