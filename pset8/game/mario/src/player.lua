@@ -142,13 +142,14 @@ function Player:top_collision()
     if  self.dy < 0 then
         if self.map:collision(self.x, self.y) or self.map:collision(self.x + self.width, self.y) then
             self.dy = 0
-            local tile_ = self.map:tile_at_pixel(self.x, self.y)
-            if tile_.id == quads.jump_box then
-                self.map:set_tile(tile_.pos_x, tile_.pos_y, quads.jump_box_hit)
+             local tile_
+            if self.map:collision(self.x, self.y) then
+                tile_ = self.map:tile_at_pixel(self.x, self.y)
+            else
+                tile_ = self.map:tile_at_pixel(self.x + self.width, self.y)
             end
-            tile_ = self.map:tile_at_pixel(self.x + self.width, self.y)
             if tile_.id == quads.jump_box then
-                self.map:set_tile(tile_.pos_x, tile_.pos_y, quads.jump_box_hit)
+                self.map:set_tile(tile_.pos_x / self.map.tile_width, tile_.pos_y / self.map.tile_height, quads.jump_box_hit)
             end
         end
     end
@@ -175,6 +176,7 @@ function Player:left_collision()
         -- the - 1 is important otherwise it will keep colliding with the ground
         if self.map:collision(self.x, self.y) or self.map:collision(self.x, self.y + self.height - 1) then
             self.dx = 0
+            self:bottom_collision()
         end
     end
 end
@@ -185,6 +187,7 @@ function Player:right_collision()
         if self.map:collision(self.x + self.width, self.y) or self.map:collision(self.x + self.width, self.y + self.height - 1) then
             self.dx = 0
             self.x = self.map:tile_at_pixel(self.x + self.width, self.y).pos_x - 2 * self.map.tile_width
+            self:bottom_collision()
         end
     end
 end

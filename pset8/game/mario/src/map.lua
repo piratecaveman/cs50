@@ -87,6 +87,11 @@ end
 
 function Map:update(dt)
     self.player:update(dt)
+
+    -- camera movement
+    local righter_most = math.min(self.player.x, self.width_pixels - screen.virtual_width)
+    local lefter_most = math.min(self.player.x - screen.virtual_width / 2, righter_most)
+    self.cam_x = math.max(0, lefter_most)
 end
 
 

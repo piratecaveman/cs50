@@ -1,3 +1,5 @@
+--require("lldebugger").start()
+
 -- Screen Setup
 screen = {
     width = 1280,
@@ -62,10 +64,10 @@ function love.draw()
 
     -- flush the screen with the sky background color (rgb used) hex: #6b88fe
     love.graphics.clear(107/255, 136/255, 254/255, 255/255)
-    map:render()
-
+    -- camera movement
+    love.graphics.translate(math.floor(-map.cam_x), math.floor(-map.cam_y))
     -- render the map
-
+    map:render()
 
     Push:apply('end')
 
