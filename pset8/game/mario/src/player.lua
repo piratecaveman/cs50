@@ -63,6 +63,7 @@ function Player:init(map)
                 self.dy = -motion.jump_speed
                 self.animations[self.state]:reset()
                 self.current_animation = self.animations[self.state]
+                sounds.jump:play()
                 self:bottom_collision()
             elseif love.keyboard.isDown('a') then
                 self.state = 'walking'
@@ -90,6 +91,7 @@ function Player:init(map)
                 self.dy = -motion.jump_speed
                 self.animations[self.state]:reset()
                 self.current_animation = self.animations[self.state]
+                sounds.jump:play()
                 self:bottom_collision()
             elseif love.keyboard.isDown('a') then
                 self.state = 'walking'
@@ -142,15 +144,23 @@ function Player:top_collision()
     if  self.dy < 0 then
         if self.map:collision(self.x, self.y) or self.map:collision(self.x + self.width, self.y) then
             self.dy = 0
-             local tile_
+
+            local tile_
             if self.map:collision(self.x, self.y) then
                 tile_ = self.map:tile_at_pixel(self.x, self.y)
             else
                 tile_ = self.map:tile_at_pixel(self.x + self.width, self.y)
             end
+
             if tile_.id == quads.jump_box then
                 self.map:set_tile(tile_.pos_x / self.map.tile_width, tile_.pos_y / self.map.tile_height, quads.jump_box_hit)
+                sounds.coin:setVolume(0.5)
+                sounds.coin:play()
+            else
+                sounds.hit:setVolume(5)
+                sounds.hit:play()
             end
+
         end
     end
 end
@@ -177,6 +187,7 @@ function Player:left_collision()
         if self.map:collision(self.x, self.y) or self.map:collision(self.x, self.y + self.height - 1) then
             self.dx = 0
             self:bottom_collision()
+            sounds.empty:play()
         end
     end
 end
@@ -188,12 +199,15 @@ function Player:right_collision()
             self.dx = 0
             self.x = self.map:tile_at_pixel(self.x + self.width, self.y).pos_x - 2 * self.map.tile_width
             self:bottom_collision()
+            sounds.empty:play()
         end
     end
 end
 
 function Player:update(dt)
     if self.y > 300 then
+        sounds.background:stop()
+        sounds.death:play()
         return
     end
 

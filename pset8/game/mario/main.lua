@@ -17,6 +17,20 @@ Class = require("lib/class")
 require("src/map")
 
 
+sounds = {
+    background = love.audio.newSource('assets/sounds/music.wav', 'static'),
+    coin = love.audio.newSource('assets/sounds/coin.wav', 'static'),
+    death = love.audio.newSource('assets/sounds/death.wav', 'static'),
+    empty = love.audio.newSource('assets/sounds/empty-block.wav', 'static'),
+    hit = love.audio.newSource('assets/sounds/hit.wav', 'static'),
+    jump = love.audio.newSource('assets/sounds/jump.wav', 'static'),
+    kill_1 = love.audio.newSource('assets/sounds/kill.wav', 'static'),
+    kill_2 = love.audio.newSource('assets/sounds/kill2.wav', 'static'),
+    pickup = love.audio.newSource('assets/sounds/pickup.wav', 'static'),
+    powerup = love.audio.newSource('assets/sounds/powerup-reveal.wav', 'static')
+}
+
+
 function love.load()
     -- setting up random number system
     math.randomseed(os.time())
